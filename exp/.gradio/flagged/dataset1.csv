@@ -1,0 +1,4 @@
+文本输入,情感分析结果,timestamp
+"The market remains stable, no big changes.","{""label"": ""anger"", ""confidences"": [{""label"": ""anger"", ""confidence"": 0.4223046898841858}, {""label"": ""love"", ""confidence"": 0.28708240389823914}, {""label"": ""sadness"", ""confidence"": 0.1875910460948944}]}",2026-06-01 15:25:03.502633
+"The market remains stable, no big changes.","{""label"": ""anger"", ""confidences"": [{""label"": ""anger"", ""confidence"": 0.4223046898841858}, {""label"": ""love"", ""confidence"": 0.28708240389823914}, {""label"": ""sadness"", ""confidence"": 0.1875910460948944}]}",2026-06-01 15:25:05.266687
+"The market remains stable, no big changes.","{""label"": ""anger"", ""confidences"": [{""label"": ""anger"", ""confidence"": 0.4223046898841858}, {""label"": ""love"", ""confidence"": 0.28708240389823914}, {""label"": ""sadness"", ""confidence"": 0.1875910460948944}]}",2026-06-01 15:25:06.774994

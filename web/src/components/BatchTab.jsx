@@ -83,11 +83,11 @@ export default function BatchTab({ onPredictionDone }) {
                   <th>#</th>
                   <th>文本</th>
                   <th>Top-1</th>
-                  <th>置信度</th>
                   <th>Top-2</th>
-                  <th>置信度</th>
                   <th>Top-3</th>
-                  <th>置信度</th>
+                  <th>Top-1置信度</th>
+                  <th>Top-2置信度</th>
+                  <th>Top-3置信度</th>
                 </tr>
               </thead>
               <tbody>

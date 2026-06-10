@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
-"""模型加载与推理（预测）"""
+"""模型加载与推理"""
 
 import re
 import torch
-import numpy as np
 from config import DEVICE, MAX_LEN, MODEL_PATH, VOCAB_PATH, LABEL_MAP_PATH
+from data_loader import clean_text
 from model import BiLSTMClassifier
+
 
 def load_model_and_vocab():
     vocab = torch.load(VOCAB_PATH)
@@ -17,13 +18,15 @@ def load_model_and_vocab():
     model.eval()
     return model, vocab, id2label
 
+
 def preprocess_text(text, vocab, max_len=MAX_LEN):
-    text = re.sub(r'[^a-zA-Z\s]', '', text.lower())
+    text = clean_text(text)          # 与训练时完全一致
     words = text.split()
     ids = [vocab.get(w, vocab.get('<unk>', 1)) for w in words[:max_len]]
     if len(ids) < max_len:
         ids += [vocab.get('<pad>', 0)] * (max_len - len(ids))
     return torch.tensor(ids, dtype=torch.long).unsqueeze(0)
+
 
 def predict(text, model, vocab, id2label):
     input_ids = preprocess_text(text, vocab).to(DEVICE)
